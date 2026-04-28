@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tg">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="logo"> :) </div>
+      <div>
+        <div class="h-title">Editor</div>
+      </div>
+    </div>
+
+    <div class="editor-wrap">
+
+      <div class="tools" aria-hidden="false">
+        <div class="upload-wrap">
+          <button class="upload-btn" id="uploadBtn">Upload image</button>
+          <input id="upload" class="upload-input" type="file" accept="image/*">
+        </div>
+
+        <div class="row">
+          <button class="btn" id="undo">Undo</button>
+          <button class="btn" id="redo">Redo</button>
+        </div>
+
+        <div class="row">
+          <button class="btn" id="reset">Reset</button>
+          <button class="btn primary" id="download">Download</button>
+        </div>
+
+        <div class="slider">
+          <label>Rotate <span id="rotateVal" style="float:right;color:#111;font-weight:800">0°</span></label>
+          <input type="range" id="rotate" min="0" max="360" value="0">
+        </div>
+
+        <div class="slider">
+          <label>Brightness <span id="brightVal" style="float:right;color:#111;font-weight:800">100%</span></label>
+          <input type="range" id="brightness" min="0" max="200" value="100">
+        </div>
+
+        <div class="slider">
+          <label>Contrast <span id="contrastVal" style="float:right;color:#111;font-weight:800">100%</span></label>
+          <input type="range" id="contrast" min="0" max="200" value="100">
+        </div>
+
+        <div class="slider">
+          <label>Saturate <span id="satVal" style="float:right;color:#111;font-weight:800">100%</span></label>
+          <input type="range" id="saturate" min="0" max="200" value="100">
+        </div>
+
+        <div class="hint">Created by Abdughafur</div>
+      </div>
+
+
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="canvas" width="800" height="520" aria-label="Image canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
